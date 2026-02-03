@@ -1,14 +1,17 @@
-import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import AboutUsPage from './pages/AboutUsPage';
+import SmoothScroll from './components/SmoothScroll';
 
 const App: React.FC = () => {
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/about" element={<AboutUsPage />} />
-    </Routes>
+    <>
+      <SmoothScroll />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutUsPage />} />
+      </Routes>
+    </>
   );
 };
 
