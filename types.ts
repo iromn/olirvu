@@ -12,6 +12,7 @@ export interface ServiceItem {
 
 export interface ValueItem {
   title: string;
+  description?: string;
 }
 
 export interface TestimonialItem {

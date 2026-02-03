@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import logo from '../assets/olirvu_logo.svg';
 
 interface NavLink {
   label: string;
@@ -21,18 +22,13 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="w-full bg-white/95 backdrop-blur-sm sticky top-0 z-50 py-4 px-6 md:px-12 lg:px-20 shadow-sm border-b border-gray-100">
-      <div className="max-w-7xl mx-auto flex justify-between items-center">
+      <div className="max-w-8xl mx-auto flex justify-between items-center">
         {/* Logo Recreated with CSS/SVG approximation */}
         <Link to="/" className="flex flex-col items-center justify-center">
           {/* Logo Icon */}
-          <div className="relative w-8 h-8 mb-1">
-            <div className="absolute inset-0 bg-primary rounded-full mask-moon" style={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)', borderRadius: '50%' }}></div>
-            {/* Simulated Moon Shape using CSS radial gradient or SVG would be better, using simple SVG here */}
-            <svg viewBox="0 0 24 24" fill="none" className="w-8 h-8 text-primary fill-current">
-              <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-5.4-5.4 5.389 5.389 0 0 1 2.26-4.4C12.92 3.04 12.46 3 12 3z" />
-            </svg>
+          <div className="relative w-12 h-12 mb-1">
+            <img src={logo} alt="Olirvu Logo" className="w-full h-full object-contain" />
           </div>
-          <div className="text-[0.6rem] tracking-[0.2em] font-light text-gray-500 uppercase">Aesthetic Dermatology</div>
         </Link>
 
         {/* Desktop Links */}
